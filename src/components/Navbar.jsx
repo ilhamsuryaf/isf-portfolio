@@ -65,9 +65,9 @@ export default Navbar;
 
 const NavigationLinks = ({ title, href }) => {
   return (
-    <div className="relative max-md:text-4xl max-md:my-4">
+    <div className="relative max-md:text-4xl max-md:my-4 mx-4">
       <a
-        className="after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-0 after:bg-white hover:after:w- after:transition-all after:duration-300"
+        className="after:absolute after:-bottom-1 after:left-0 after:h-1 after:w-0 after:bg-white hover:after:w-full after:transition-all after:duration-300"
         href={href}
       >
         {title}
