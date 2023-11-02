@@ -1,4 +1,5 @@
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 import {
   AiOutlineLinkedin,
   AiOutlineGithub,
@@ -17,28 +18,35 @@ const Hero = () => {
   });
   return (
     <div className="flex max-md:flex-col justify-center gap-8 p-8 items-center w-full min-h-screen bg-neutral-800">
-      <div className="text-white">
+      <motion.div
+        initial={{ y: 10, opacity: 0.2 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="text-white"
+      >
         <h1 className="text-4xl font-semibold">
           Hi, I am Ilham Surya Fernanda.
         </h1>
-        <p className="text-xl font-medium">
+        <p className="text-xl font-medium bg-gradient-to-r from-blue-500 via-green-500 to-green-500 bg-clip-text text-transparent">
           I<span>{text}</span>
-          <Cursor cursorColor="red" />
         </p>
 
         <div className="flex mt-8 gap-4 items-center text-neutral-800 text-center">
           {heroNavigation.map((nav, index) => (
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               key={index}
               href={nav.href}
               target={`_blank`}
-              className={`bg-white p-1 rounded-lg text-xl font-bold hover:-translate-y-1 hover:shadow-md ${nav.shadow} hover:scale-105 transition-all ease-linear duration-300`}
+              className={`bg-white p-1 rounded-lg text-xl font-bold hover:-translate-y-1 hover:shadow-md ${nav.shadow}`}
             >
               {nav.icon}
-            </a>
+            </motion.a>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -49,16 +57,16 @@ const heroNavigation = [
   {
     icon: <AiOutlineDownload />,
     href: "#",
-    shadow: "hover:shadow-green-600 ",
+    shadow: "hover:shadow-green-600",
   },
   {
     icon: <AiOutlineLinkedin />,
     href: "https://www.linkedin.com/in/ilham-surya-fernanda-096079262/",
-    shadow: "hover:shadow-blue-600 ",
+    shadow: "hover:shadow-blue-600",
   },
   {
     icon: <AiOutlineGithub />,
     href: "https://github.com/ilhamsuryaf",
-    shadow: "hover:shadow-amber-600 ",
+    shadow: "hover:shadow-amber-600",
   },
 ];
