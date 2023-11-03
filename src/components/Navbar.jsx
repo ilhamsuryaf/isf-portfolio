@@ -4,12 +4,12 @@ import { TiThMenuOutline, TiTimesOutline } from "react-icons/ti";
 
 const navigation = [
   {
-    title: "About",
-    href: "/about",
+    title: "Home",
+    href: "/",
   },
   {
-    title: "Skills",
-    href: "/skills",
+    title: "About",
+    href: "/About",
   },
   {
     title: "Projects",
@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-50">
+    <nav className="fixed top-0 left-0 w-full z-50">
       <button
         onClick={toggleMenu}
         className="hidden text-white max-md:fixed max-md:z-10 max-md:flex max-md:top-9 max-md:right-9 text-4xl  transition-all duration-500 ease-in-out"
@@ -57,12 +57,12 @@ const Navbar = () => {
         )}
       </button>
       <div
-        className={`flex fixed justify-around items-center bg-neutral-800 max-md:bg-violet-950 text-white w-full p-4 max-md:h-screen max-md:flex-col max-md:justify-center max-md:shadow-xl max-md:shadow-violet-950 ${
+        className={`flex fixed justify-around items-center bg-neutral-800 max-md:bg-gradient-to-br max-md:from-indigo-900 max-md:to-violet-900 text-white w-full p-4 max-md:h-screen max-md:flex-col max-md:justify-center max-md:shadow-xl max-md:shadow-violet-950 ${
           menuOpen ? "max-md:left-0" : "max-md:left-[110%]"
         } transition-all duration-700 ease-in-out
         `}
       >
-        <div className="font-bold text-3xl max-md:absolute max-md:text-9xl max-md:left-1/2 max-md:top-1/2 max-md:opacity-70 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
+        <div className="font-bold text-3xl max-md:absolute max-md:text-9xl max-md:left-1/2 max-md:top-1/2 max-md:opacity-70 bg-gradient-to-r from-accent-pink via-accent-red to-accent-orange bg-clip-text text-transparent">
           <a href="/">ISF</a>
         </div>
         <AnimatePresence>
