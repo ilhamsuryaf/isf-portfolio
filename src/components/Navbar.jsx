@@ -62,7 +62,7 @@ const Navbar = () => {
         } transition-all duration-700 ease-in-out
         `}
       >
-        <div className="font-bold text-3xl max-md:absolute max-md:text-9xl max-md:left-1/2 max-md:top-1/2 max-md:opacity-70 bg-gradient-to-r from-accent-pink via-accent-red to-accent-orange bg-clip-text text-transparent">
+        <div className="font-bold text-3xl max-md:absolute max-md:text-9xl max-md:left-1/2 max-md:top-1/2 max-md:opacity-70 bg-gradient-to-l from-accent-pink via-accent-red to-accent-orange bg-clip-text text-transparent">
           <a href="/">ISF</a>
         </div>
         <AnimatePresence>
@@ -115,7 +115,7 @@ const NavigationLinks = ({ title, href }) => {
       variants={navigationVariants}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="relative max-md:text-4xl max-md:my-3 mx-4 after:absolute max-md:after:-bottom-1 after:bottom-0 after:left-0 after:h-1 after:w-0 after:rounded-lg after:bg-white hover:after:w-full after:transition-all after:duration-300"
+      className="relative max-md:text-4xl max-md:my-3 mx-4 after:absolute max-md:after:-bottom-1 after:bottom-0 after:left-0 after:h-1 after:w-0 after:rounded-lg after:bg-accent-pink hover:after:w-full after:transition-all after:duration-300"
     >
       <a href={href}>{title}</a>
     </motion.div>

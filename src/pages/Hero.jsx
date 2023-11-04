@@ -17,7 +17,7 @@ const Hero = () => {
     deleteSpeed: 50,
   });
   return (
-    <div className="flex max-md:flex-col justify-center gap-8 p-8 items-center w-full min-h-screen bg-neutral-800">
+    <div className="flex max-lg:flex-col justify-center gap-8 p-8 items-center w-full min-h-screen bg-neutral-800">
       <motion.div
         initial={{ y: 10, opacity: 0.2 }}
         whileInView={{ y: 0, opacity: 1 }}
