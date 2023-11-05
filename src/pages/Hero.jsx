@@ -40,6 +40,7 @@ const Hero = () => {
               key={index}
               href={nav.href}
               target={`_blank`}
+              rel="noreferrer"
               className={`bg-white relative p-1 rounded-lg text-xl font-bold hover:-translate-y-1 hover:shadow-md ${nav.shadow}`}
             >
               {nav.icon}

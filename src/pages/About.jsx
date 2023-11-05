@@ -10,16 +10,26 @@ import ProfilePic from "../components/ProfilePic";
 
 const About = () => {
   return (
-    <div className="flex max-lg:flex-col relative w-full h-3/4 px-24 py-5 max-md:px-5 bg-neutral-800 justify-center items-center">
-      <div className="absolute max-lg:hidden flex -top-16 right-72 text-2xl font-extrabold bg-gradient-to-r from-accent-pink via-accent-pink to-accent-red bg-clip-text text-transparent opacity-20">
+    <div className="flex max-lg:flex-col relative w-full h-3/4 px-24 py-10 max-md:px-5 bg-neutral-800 justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 0.3, x: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="absolute max-lg:hidden flex -top-16 right-72 text-2xl font-extrabold bg-gradient-to-r from-accent-pink via-accent-pink to-accent-red bg-clip-text text-transparent opacity-20"
+      >
         <img src="../image/arrow.png" className="w-16 mt-2" />
         <h3>Hover Me!</h3>
-      </div>
-      <h1 className="lg:mx-4 lg:absolute lg:top-48 lg:left-12 lg:opacity-20 my-2 opacity-60 text-9xl max-lg:text-5xl font-bold bg-gradient-to-l from-accent-pink via-accent-red to-accent-orange bg-clip-text text-transparent">
+      </motion.div>
+      <h1 className="lg:mx-4 lg:absolute lg:h-full lg:top-48 lg:left-12 lg:opacity-20 py-2 opacity-60 text-9xl max-lg:text-5xl font-bold bg-gradient-to-l from-accent-pink via-accent-red to-accent-orange bg-clip-text text-transparent">
         Me, Myself & I
       </h1>
-      <div className="flex flex-col w-1/2 z-30 mx-8 max-lg:w-full max-lg:mx-0 max-lg:mb-8">
-        <p className="text-white text-lg max-lg:w-full font-semibold">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="flex flex-col w-1/2 z-30 mx-8 max-lg:w-full max-lg:mx-0 max-lg:mb-8"
+      >
+        <p className="text-white text-lg max-md:text-base max-lg:w-full font-semibold">
           {`My name is Ilham Surya Fernanda. I'm a frontend web developer based
           in Indonesia. I spent 8 months learning about frontend web
           development. I'm eager to continue to learn more language, framework,
@@ -45,7 +55,7 @@ const About = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
       <ProfilePic />
     </div>
   );
