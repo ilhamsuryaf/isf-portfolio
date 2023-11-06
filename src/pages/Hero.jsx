@@ -17,7 +17,7 @@ const Hero = () => {
     deleteSpeed: 50,
   });
   return (
-    <div className="w-full min-h-screen bg-wave bg-center bg-no-repeat bg-cover">
+    <div className="min-h-screen bg-wave bg-center bg-no-repeat bg-cover">
       <motion.div
         initial={{ y: 10, opacity: 0.2 }}
         whileInView={{ y: 0, opacity: 1, backdropFilter: "blur(3px)" }}

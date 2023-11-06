@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex max-lg:flex-col relative w-full h-3/4 px-24 pt-20 pb-8 max-lg:py-5 max-md:px-5 bg-neutral-800 justify-center items-center"
+      className="flex max-lg:flex-col relative h-3/4 px-24 pt-20 pb-8 max-lg:py-5 max-md:px-5 bg-neutral-800 justify-center items-center"
     >
       <motion.div
         initial={{ opacity: 0, x: 100 }}
