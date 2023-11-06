@@ -17,17 +17,20 @@ const Hero = () => {
     deleteSpeed: 50,
   });
   return (
-    <div className="flex max-lg:flex-col justify-center gap-8 p-8 items-center w-full min-h-screen bg-neutral-800">
+    <div className="w-full min-h-screen bg-wave bg-center bg-no-repeat bg-cover">
       <motion.div
         initial={{ y: 10, opacity: 0.2 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        whileInView={{ y: 0, opacity: 1, backdropFilter: "blur(3px)" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="text-white"
+        className="text-white w-full text-center min-h-screen flex flex-col p-8 justify-center items-center"
       >
         <h1 className="text-4xl font-semibold">
-          Hi, I am Ilham Surya Fernanda.
+          Hi, I am <br className="lg:hidden" />{" "}
+          <span className="font-caveat font-bold text-accent-pink text-6xl">
+            Ilham Surya Fernanda
+          </span>
         </h1>
-        <h3 className="text-xl font-medium bg-gradient-to-r from-accent-pink via-accent-red to-accent-orange bg-clip-text text-transparent">
+        <h3 className="text-xl font-medium">
           I<span>{text}</span>
         </h3>
 

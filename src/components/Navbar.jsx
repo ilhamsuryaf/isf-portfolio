@@ -9,15 +9,15 @@ const navigation = [
   },
   {
     title: "About",
-    href: "/About",
+    href: "#about",
   },
   {
     title: "Projects",
-    href: "/projects",
+    href: "#projects",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
@@ -51,13 +51,13 @@ const Navbar = () => {
         className="hidden text-white max-md:fixed max-md:z-10 max-md:flex max-md:top-9 max-md:right-9 text-4xl  transition-all duration-500 ease-in-out"
       >
         {menuOpen ? (
-          <TiTimesOutline className="hover:text-red-700" />
+          <TiTimesOutline className="hover:text-accent-red" />
         ) : (
-          <TiThMenuOutline className="hover:text-green-500" />
+          <TiThMenuOutline className="hover:text-accent-pink" />
         )}
       </button>
       <div
-        className={`flex fixed justify-around items-center bg-neutral-800 max-md:bg-gradient-to-br max-md:from-indigo-900 max-md:to-violet-900 text-white w-full p-4 max-md:h-screen max-md:flex-col max-md:justify-center max-md:shadow-xl max-md:shadow-violet-950 ${
+        className={`flex fixed justify-around items-center bg-neutral-800 bg-opacity-40 hover:bg-opacity-100 max-md:bg-gradient-to-br max-md:from-indigo-900 max-md:to-violet-900 text-white w-full p-4 max-md:h-screen max-md:flex-col max-md:justify-center max-md:shadow-xl max-md:shadow-violet-950 ${
           menuOpen ? "max-md:left-0" : "max-md:left-[110%]"
         } transition-all duration-700 ease-in-out
         `}

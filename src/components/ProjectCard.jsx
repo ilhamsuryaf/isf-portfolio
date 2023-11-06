@@ -66,14 +66,14 @@ const SelectedBox = ({ selectedProject }) => {
       animate={{ backgroundColor: "rgba(23, 23, 23, 0.4)" }}
       transition={{ duration: 1, ease: "easeInOut" }}
       key={selectedProject.title}
-      className="lg:w-3/4 w-full h-full p-16 max-md:p-2 flex flex-col justify-center items-center text-white rounded-xl lg:border-4 border-2 border-dashed border-accent-pink overflow-hidden"
+      className="lg:w-3/4 w-full h-full p-16 max-md:p-8 max-lg:mt-6 flex flex-col justify-center items-center text-white rounded-xl lg:border-4 border-2 border-dashed border-accent-pink overflow-hidden"
     >
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <h3 className="text-2xl font-semibold text-center">
+        <h3 className="text-4xl max-lg:text-2xl font-bold  text-center font-caveat text-accent-pink">
           {selectedProject.title}
         </h3>
         <img
@@ -131,20 +131,19 @@ const SelectedBox = ({ selectedProject }) => {
 
 const ListBox = ({ projects, onSelectedProject }) => {
   return (
-    <div className="flex lg:h-96 h-12 lg:w-1/4 w-full lg:flex-col bg-neutral-900 bg-opacity-40 justify-around items-center border-2 border-dashed border-accent-pink rounded-xl overflow-hidden">
+    <ul className="flex lg:h-96 h-12 lg:w-1/4 w-full lg:flex-col bg-neutral-900 bg-opacity-40 justify-around items-center border-2 border-dashed border-accent-pink rounded-xl overflow-hidden">
       {projects.map((data) => (
-        <motion.div
+        <motion.li
           initial={{ opacity: 0.5 }}
           whileHover={{ opacity: 1, backgroundColor: "#DE2F8A" }}
-          whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           key={data.title}
           onClick={() => onSelectedProject(data.title)}
-          className="lg:h-1/3 lg:w-full h-full w-1/3 flex text-center max-lg:border-2 max-lg:border-accent-pink items-center justify-center max-md:text-sm text-white font-semibold"
+          className={`lg:h-1/${projects.length} lg:w-full h-full w-1/${projects.length} flex text-center max-lg:border-x-2 max-lg:border-accent-pink items-center justify-center max-md:text-sm text-white font-semibold`}
         >
           {data.title}
-        </motion.div>
+        </motion.li>
       ))}
-    </div>
+    </ul>
   );
 };

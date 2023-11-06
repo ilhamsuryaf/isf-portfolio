@@ -10,12 +10,15 @@ import ProfilePic from "../components/ProfilePic";
 
 const About = () => {
   return (
-    <div className="flex max-lg:flex-col relative w-full h-3/4 px-24 py-10 max-md:px-5 bg-neutral-800 justify-center items-center">
+    <div
+      id="about"
+      className="flex max-lg:flex-col relative w-full h-3/4 px-24 pt-20 pb-8 max-lg:py-5 max-md:px-5 bg-neutral-800 justify-center items-center"
+    >
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 0.3, x: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="absolute max-lg:hidden flex -top-16 right-72 text-2xl font-extrabold bg-gradient-to-r from-accent-pink via-accent-pink to-accent-red bg-clip-text text-transparent opacity-20"
+        className="absolute max-lg:hidden flex top-0 right-72 text-2xl font-extrabold bg-gradient-to-r from-accent-pink via-accent-pink to-accent-red bg-clip-text text-transparent opacity-20"
       >
         <img src="../image/arrow.png" className="w-16 mt-2" />
         <h3>Hover Me!</h3>
@@ -27,12 +30,11 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="flex flex-col w-1/2 z-30 mx-8 max-lg:w-full max-lg:mx-0 max-lg:mb-8"
+        className="flex flex-col w-1/2 z-30 mx-8 max-lg:w-full max-lg:mx-0 max-lg:mb-8 max-lg:mt-6"
       >
         <p className="text-white text-lg max-md:text-base max-lg:w-full font-semibold">
           {`My name is Ilham Surya Fernanda. I'm a frontend web developer based
-          in Indonesia. I spent 8 months learning about frontend web
-          development. I'm eager to continue to learn more language, framework,
+          in Indonesia.  I'm eager to continue to learn more language, framework,
           and tools in frontend technology.  I'm passionate about web development and dedicated to expanding my skills to create more dynamic and interactive websites while also exploring the technical aspects that power them.`}
         </p>
         <div className="text-white text-lg max-lg:w-full font-semibold my-4">
