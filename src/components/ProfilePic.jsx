@@ -43,6 +43,7 @@ const ProfilePic = () => {
     <motion.div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      whileTap={handleMouseMove}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       className="flex relative w-72 max-md:w-3/4 h-96 rounded-xl bg-accent-pink bg-opacity-50 justify-center items-center opacity-75 hover:opacity-100"
     >
