@@ -79,6 +79,7 @@ const Navbar = () => {
                   <NavigationLinks
                     title={nav.title}
                     href={nav.href}
+                    toggleMenu={toggleMenu}
                   ></NavigationLinks>
                 </div>
               );
@@ -109,12 +110,13 @@ const navigationVariants = {
   },
 };
 
-const NavigationLinks = ({ title, href }) => {
+const NavigationLinks = ({ title, href, toggleMenu }) => {
   return (
     <motion.div
       variants={navigationVariants}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
+      onClick={toggleMenu}
       className="relative max-md:text-4xl max-md:my-3 mx-4 after:absolute max-md:after:-bottom-1 after:bottom-0 after:left-0 after:h-1 after:w-0 after:rounded-lg after:bg-accent-pink hover:after:w-full after:transition-all after:duration-300"
     >
       <a href={href}>{title}</a>
