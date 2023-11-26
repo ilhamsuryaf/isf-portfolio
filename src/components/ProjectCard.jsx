@@ -79,7 +79,7 @@ const SelectedBox = ({ selectedProject }) => {
         <img
           src={selectedProject.image}
           alt={selectedProject.title}
-          className="h-3/4 aspect-video"
+          className="aspect-video"
         />
         <p className="text-sm lg:text-md font-semibold">
           {selectedProject.description}
