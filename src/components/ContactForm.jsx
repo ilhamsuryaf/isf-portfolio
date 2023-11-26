@@ -41,6 +41,7 @@ function ContactForm() {
           placeholder="Name"
           onChange={(e) => setName(e.target.value)}
           value={name}
+          required
           className="rounded-md p-2 focus:outline-accent-pink outline-none bg-neutral-900 bg-opacity-50 text-white"
         />
         <input
@@ -49,6 +50,7 @@ function ContactForm() {
           placeholder="Your Email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          required
           className="rounded-md p-2 focus:outline-accent-pink outline-none bg-neutral-900 bg-opacity-50 text-white"
         />
         <textarea
